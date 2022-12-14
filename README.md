@@ -15,3 +15,4 @@ My default OS is Mac OS.
 
 ## Code IDE
 - [vscode](https://formulae.brew.sh/cask/visual-studio-code)
+- [lunarvim](https://www.lunarvim.org/)
