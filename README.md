@@ -12,6 +12,7 @@ My default OS is Mac OS.
 
 ### Theme
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k) (For now)
+- [nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
 
 ## Code IDE
 - [vscode](https://formulae.brew.sh/cask/visual-studio-code)
