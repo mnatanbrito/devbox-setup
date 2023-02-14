@@ -10,6 +10,9 @@ My default OS is Mac OS.
 ## Shell
 - [oh my zsh](https://ohmyz.sh/)
 
+### Plugins
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+
 ### Theme
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k) (For now)
 - [nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
