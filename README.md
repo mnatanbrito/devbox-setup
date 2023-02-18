@@ -9,11 +9,11 @@ My default OS is Mac OS.
 
 ## Shell
 - [oh my zsh](https://ohmyz.sh/)
+- [nvm auto-load](https://gist.github.com/tcrammond/e52dfad4c2b36258f83f7a964af10097)
 
 ### Plugins
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [zsh-auto-nvm-use](https://github.com/Sparragus/zsh-auto-nvm-use)
 
 ### Theme
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k) (For now)
