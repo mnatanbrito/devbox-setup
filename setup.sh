@@ -30,3 +30,6 @@ echo "Installing Oh My Zsh"
 # configure github cli
 # gh auth login --git-protocol ssh
 
+# configure git user info
+git config --global user.name "mnatanbrito"
+git config --global user.email "mnatan.brito@gmail.com"
