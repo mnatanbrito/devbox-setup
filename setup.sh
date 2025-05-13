@@ -1,32 +1,32 @@
-# Output colors
-Color_Off='\033[0m'       # Text Reset
+#######################
+# Pre-requisites
+#######################
 
-# Regular Colors
-Black='\033[0;30m'        # Black
-Red='\033[0;31m'          # Red
-Green='\033[0;32m'        # Green
-Yellow='\033[0;33m'       # Yellow
-Blue='\033[0;34m'         # Blue
-Purple='\033[0;35m'       # Purple
-Cyan='\033[0;36m'         # Cyan
-White='\033[0;37m'        # White
-
-#################
-# General purpose
-################
-
-# Install brew
-echo "Downloading Brew package manager"
-
+echo "Downloading brew package manager"
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+#######################
+# Default brew packages
+#######################
 
-#################
-# Terminals
-################
+echo "Copying default files to user folder"
+cp Brewfile ~/Brewfile
+cp .zprofile ~/.zprofile
+cp .zshrc ~/.zshrc
 
-# Install iTerm2
-# brew install --cask iterm2
+# creates ~/.config if it does not exist
+mkdir -p ~/.config
+cp -r .config/* ~/.config/
 
-# Install Starship prompt
-#brew install starship
+# Loading brew into the shell
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Install packages in brew file
+brew bundle install 
+
+echo "Installing Oh My Zsh"
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# configure github cli
+# gh auth login --git-protocol ssh
+
