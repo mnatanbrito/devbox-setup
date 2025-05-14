@@ -22,10 +22,14 @@ cp -r .config/* ~/.config/
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install packages in brew file
-brew bundle install 
+brew bundle install --verbose --force 
 
 echo "Installing Oh My Zsh"
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Installing Zsh plugins"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # configure github cli
 # gh auth login --git-protocol ssh
@@ -33,3 +37,9 @@ echo "Installing Oh My Zsh"
 # configure git user info
 git config --global user.name "mnatanbrito"
 git config --global user.email "mnatan.brito@gmail.com"
+
+# install app store software
+mas install 905953485
+
+# install mise globally
+mise install

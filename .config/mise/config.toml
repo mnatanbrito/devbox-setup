@@ -1,0 +1,10 @@
+[tools]
+node = { version = '20', postinstall = 'corepack enable' }
+python = '3.13'
+
+# config files with these prefixes will be trusted by default
+trusted_config_paths = [
+    '~/code',
+]
+
+env_file = '.env' # load env vars from a dotenv file, see `MISE_ENV_FILE`
