@@ -49,3 +49,6 @@ cask "iterm2"
 
 # ides
 cask "xcodes"
+
+# databases
+brew "postgresql"

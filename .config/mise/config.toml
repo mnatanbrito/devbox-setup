@@ -1,6 +1,7 @@
 [tools]
 node = { version = '20', postinstall = 'corepack enable' }
 python = '3.13'
+uv = '0.7' 
 
 # config files with these prefixes will be trusted by default
 trusted_config_paths = [
