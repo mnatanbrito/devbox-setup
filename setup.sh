@@ -10,9 +10,9 @@ echo "Downloading brew package manager"
 #######################
 
 echo "Copying default files to user folder"
-cp Brewfile ~/Brewfile
 cp .zprofile ~/.zprofile
 cp .zshrc ~/.zshrc
+cp Brewfile ~/Brewfile
 
 # creates ~/.config if it does not exist
 mkdir -p ~/.config
@@ -28,8 +28,8 @@ echo "Installing Oh My Zsh"
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Installing Zsh plugins"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # configure github cli
 # gh auth login --git-protocol ssh
@@ -39,7 +39,8 @@ git config --global user.name "mnatanbrito"
 git config --global user.email "mnatan.brito@gmail.com"
 
 # install app store software
-mas install 905953485
+# mas install 905953485
+# mas install 1486322860
 
 # install mise globally
-mise install
+mise install && mise activate

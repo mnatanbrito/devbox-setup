@@ -28,6 +28,11 @@ brew "neovim"
 # runtime tools management
 brew "mise"
 
+# databases
+
+# installs postgres and restart service if installed or upgraded
+brew "postgresql", restart_service: :changed
+
 #############
 # casks
 #############
@@ -50,5 +55,14 @@ cask "iterm2"
 # ides
 cask "xcodes"
 
-# databases
-brew "postgresql"
+# aerospace tiling manager
+cask "nikitabobko/tap/aerospace"
+
+#############
+# casks
+#############
+
+# nord vpn and nord pass
+mas "NordVPN - VPN for privacy", id: 905953485
+mas "NordPass® Password Manager", id: 1486322860
+
