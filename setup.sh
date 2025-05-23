@@ -26,7 +26,7 @@ WHITE='\033[1;37m'
 # Pre-requisites
 #######################
 
-function ensure_brew () {
+function ensure_homebrew() {
     if command -v brew &> /dev/null; then
         echo -e "${GREEN}Brew is already installed${NOCOLOR} ✅"
     else
@@ -45,7 +45,7 @@ function ensure_brew () {
 }
 
 # making sure brew is available
-ensure_brew
+ensure_homebrew
 
 # Loading brew into the shell
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -57,9 +57,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "${BLUE}Copying default files to user folder${NOCOLOR}"
 
-cp .zprofile ~/.zprofile
-cp .zshrc ~/.zshrc
-cp Brewfile ~/Brewfile
+cp .zprofile $HOME/.zprofile
+cp .zshrc $HOME/.zshrc
+cp Brewfile $HOME/Brewfile
 
 function ensure_config_dir() {
     if [ -d "$HOME/.config" ]; then
