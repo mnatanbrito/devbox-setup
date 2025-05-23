@@ -26,6 +26,12 @@ WHITE='\033[1;37m'
 # Pre-requisites
 #######################
 
+function ensure_xcode_tools() {
+    # Install xCode cli tools
+    echo "${BLUE}Installing commandline tools...${NOCOLOR} ⌛"
+    xcode-select --install
+}
+
 function ensure_homebrew() {
     if command -v brew &> /dev/null; then
         echo -e "${GREEN}Brew is already installed${NOCOLOR} ✅"
@@ -44,7 +50,8 @@ function ensure_homebrew() {
     fi
 }
 
-# making sure brew is available
+ensure_xcode_tools
+
 ensure_homebrew
 
 # Loading brew into the shell
