@@ -96,6 +96,11 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 
+################
+# Custom exports
+################
+export XDG_CONFIG_HOME="$HOME/.config"
+
 
 ################
 # Custom aliases
