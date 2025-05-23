@@ -97,17 +97,22 @@ function ensure_ohmyzsh() {
 
 ensure_ohmyzsh
 
-echo "Installing Zsh plugins"
-# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
 function ensure_ohmyzsh_plugin() {
     if [ -d "$HOME/.oh-my-zsh/custom/plugins/$1" ]; then
         echo "${GREEN}Plugin $1 already installed${NOCOLOR} ✅"
     else
-        # git clone https://github.com/zsh-users/$1 ${ZSH_CUSTOM:~/.oh-my-zsh/custom}/plugins/$1
+	echo "${BLUE}Installing $1 plugin${NOCOLOR} ⌛"
+        git clone https://github.com/zsh-users/$1 ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/$1
+        if [ -d "$HOME/.oh-my-zsh/custom/plugins/$1" ]; then
+	    echo "${GREEN}Plugin $1 installed${NOCOLOR} ✅"
+	else
+	    echo "${RED}Error installing $1 plugin${NOCOLOR}🚫"
+	    exit 1
+	fi
     fi  
 }
+
+echo "Installing Zsh plugins"
 
 ensure_ohmyzsh_plugin "zsh-autosuggestions"
 ensure_ohmyzsh_plugin "zsh-syntax-highlighting"
