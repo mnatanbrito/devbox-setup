@@ -59,10 +59,10 @@ cask "xcodes"
 cask "nikitabobko/tap/aerospace"
 
 #############
-# casks
+# mas
 #############
 
 # nord vpn and nord pass
 mas "NordVPN - VPN for privacy", id: 905953485
-mas "NordPass® Password Manager", id: 1486322860
+# mas "NordPass® Password Manager", id: 1486322860
 
