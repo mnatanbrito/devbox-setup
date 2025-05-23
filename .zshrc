@@ -130,5 +130,8 @@ alias lg="lazygit"
 # initialize starship
 eval "$(starship init zsh)"
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # enable mise shell integration
 eval "$(mise activate zsh)"

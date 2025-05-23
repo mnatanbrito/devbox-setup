@@ -11,6 +11,9 @@ tap "jesseduffield/lazygit"
 # shell
 brew "zsh"
 
+# fuzzy finder
+brew "fzf"
+
 # prompt
 brew "starship"
 
