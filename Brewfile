@@ -61,6 +61,9 @@ cask "xcodes"
 # aerospace tiling manager
 cask "nikitabobko/tap/aerospace"
 
+# utilities
+cask "clop"
+
 #############
 # mas
 #############
