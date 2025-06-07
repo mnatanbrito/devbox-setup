@@ -3,6 +3,7 @@
 #############
 
 tap "jesseduffield/lazygit"
+tap "FelixKratz/formulae"
 
 #############
 # formulas
@@ -35,6 +36,10 @@ brew "mise"
 
 # installs postgres and restart service if installed or upgraded
 brew "postgresql", restart_service: :changed
+
+# miscellaneous
+
+brew "borders"
 
 #############
 # casks
