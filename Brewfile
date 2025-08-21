@@ -52,6 +52,7 @@ cask "brave-browser"
 
 # text editors
 cask "sublime-text" 
+cask "visual-studio-code"
 
 # nerd fonts
 cask "font-jetbrains-mono"
