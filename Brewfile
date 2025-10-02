@@ -62,7 +62,10 @@ cask "font-fira-code-nerd-font"
 cask "iterm2"
 
 # ides
-cask "xcodes"
+cask "xcodes-app"
+
+# dev
+cask "jupyterlab"
 
 # aerospace tiling manager
 cask "nikitabobko/tap/aerospace"
@@ -77,4 +80,3 @@ cask "clop"
 # nord vpn and nord pass
 mas "NordVPN - VPN for privacy", id: 905953485
 # mas "NordPass® Password Manager", id: 1486322860
-
