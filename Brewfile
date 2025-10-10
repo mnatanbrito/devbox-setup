@@ -45,6 +45,9 @@ brew "borders"
 # casks
 #############
 
+# networking
+cask "mitmproxy"
+
 # browsers
 cask "google-chrome"
 cask "firefox"
