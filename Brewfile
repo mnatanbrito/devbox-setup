@@ -18,6 +18,9 @@ brew "fzf"
 # prompt
 brew "starship"
 
+# utilities
+brew "jq"
+
 # github cli
 brew "gh"
 
