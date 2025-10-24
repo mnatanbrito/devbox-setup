@@ -20,6 +20,8 @@ brew "starship"
 
 # utilities
 brew "jq"
+brew "ripgrep"
+brew "fd"
 
 # github cli
 brew "gh"
