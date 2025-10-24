@@ -133,3 +133,6 @@ source <(fzf --zsh)
 
 # enable mise shell integration
 eval "$(mise activate zsh)"
+
+# install mise global tools
+mise install --yes

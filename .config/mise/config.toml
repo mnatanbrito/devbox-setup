@@ -2,6 +2,12 @@
 node = { version = '20', postinstall = 'corepack enable' }
 python = '3.13'
 uv = '0.7' 
+bun = '1.3'
+
+[settings]
+# tools can read the versions files used by other version managers
+# for example, .nvmrc in the case of node's nvm
+idiomatic_version_file_enable_tools = ['node']
 
 # config files with these prefixes will be trusted by default
 trusted_config_paths = [
