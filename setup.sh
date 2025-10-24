@@ -26,6 +26,13 @@ WHITE='\033[1;37m'
 # Pre-requisites
 #######################
 
+function ensure_permission() {
+    echo "${BLUE}Ensuring execution permission on $1${NOCOLOR} ✅"
+    chmod +x $1
+}
+
+ensure_permission "setup.sh"
+
 function ensure_xcode_tools() {
     # Install xCode cli tools
     echo "${BLUE}Installing commandline tools...${NOCOLOR} ⌛"
