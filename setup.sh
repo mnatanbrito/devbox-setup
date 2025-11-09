@@ -30,8 +30,6 @@ function ensure_permission() {
     chmod +x "$1"
 }
 
-ensure_permission "setup.sh"
-
 function ensure_xcode_tools() {
     # Install xCode cli tools
     echo "${BLUE}Installing commandline tools...${NOCOLOR} ⌛"
@@ -55,6 +53,8 @@ function ensure_homebrew() {
         fi
     fi
 }
+
+ensure_permission "setup.sh"
 
 ensure_xcode_tools
 
@@ -85,7 +85,6 @@ function ensure_config_dir() {
 
 # creates ~/.config if it does not exist
 ensure_config_dir
-cp -r .config/* ~/.config/
 
 #######################
 # Zsh   Plugins
@@ -173,3 +172,9 @@ function ensure_lazy_vim() {
 }
 
 ensure_lazy_vim
+
+# copy user files
+echo "${GREEN}Copying user files${NOCOLOR} ✅"
+
+cp -r .config/* ~/.config/
+
