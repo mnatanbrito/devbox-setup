@@ -12,9 +12,6 @@ tap "FelixKratz/formulae"
 # shell
 brew "zsh"
 
-# fuzzy finder
-brew "fzf"
-
 # prompt
 brew "starship"
 
@@ -22,6 +19,14 @@ brew "starship"
 brew "jq"
 brew "ripgrep"
 brew "fd"
+brew "ffmpeg"
+brew "sevenzip"
+brew "poppler"
+brew "zoxide"
+brew "resvg"
+brew "imagemagick"
+brew "fzf"
+brew "yazi"
 
 # github cli
 brew "gh"
@@ -65,6 +70,7 @@ cask "visual-studio-code"
 # nerd fonts
 cask "font-jetbrains-mono"
 cask "font-fira-code-nerd-font"
+cask "font-symbols-only-nerd-font"
 
 # terminal emulators
 cask "iterm2"

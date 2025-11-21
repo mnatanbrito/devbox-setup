@@ -17,9 +17,9 @@ return {
         ]],
 			},
 		},
-		explorer = {
-			files = {
-				hidden = true,
+		picker = {
+			sources = {
+				explorer = { hidden = true },
 			},
 		},
 	},
