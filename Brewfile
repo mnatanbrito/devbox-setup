@@ -28,19 +28,19 @@ brew "imagemagick"
 brew "fzf"
 brew "yazi"
 
-# github cli
-brew "gh"
+# miscellaneous
+brew "borders"
 
-# lazygit
+# programming tools / runtime
+brew "gh"
 brew "lazygit"
+brew "mise"
 
 # mac apple store command line
 brew "mas"
 
+# text editors
 brew "neovim"
-
-# runtime tools management
-brew "mise"
 
 # databases
 
@@ -48,7 +48,6 @@ brew "mise"
 brew "postgresql", restart_service: :changed
 
 # miscellaneous
-
 brew "borders"
 
 #############
@@ -62,6 +61,7 @@ cask "mitmproxy"
 cask "google-chrome"
 cask "firefox"
 cask "brave-browser"
+cask "arc"
 
 # text editors
 cask "sublime-text" 
@@ -92,5 +92,5 @@ cask "clop"
 #############
 
 # nord vpn and nord pass
-mas "NordVPN - VPN for privacy", id: 905953485
+# mas "NordVPN - VPN for privacy", id: 905953485
 # mas "NordPass® Password Manager", id: 1486322860
