@@ -3,8 +3,3 @@
 -- Add any additional keymaps here
 
 -- additional keymaps
-
--- open explorer on command+b
-vim.keymap.set("n", "<C-b>", function()
-	Snacks.explorer.open()
-end, { desc = "Toggle Explorer" })
