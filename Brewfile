@@ -9,10 +9,8 @@ tap "FelixKratz/formulae"
 # formulas
 #############
 
-# shell
+# shell & prompt
 brew "zsh"
-
-# prompt
 brew "starship"
 
 # utilities
@@ -42,13 +40,13 @@ brew "mas"
 # text editors
 brew "neovim"
 
+# ai
+brew "opencode"
+
 # databases
 
 # installs postgres and restart service if installed or upgraded
 brew "postgresql", restart_service: :changed
-
-# miscellaneous
-brew "borders"
 
 #############
 # casks
