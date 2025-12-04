@@ -65,6 +65,9 @@ cask "arc"
 cask "sublime-text" 
 cask "visual-studio-code"
 
+# ai
+cask "claude-code"
+
 # nerd fonts
 cask "font-jetbrains-mono"
 cask "font-fira-code-nerd-font"

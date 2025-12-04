@@ -109,6 +109,7 @@ alias reload="source ~/.zshrc"
 alias show="ls -la "
 alias rmdir="rm -dRf "
 alias ports="lsof -i -P -n | grep LISTEN"
+alias v="nvim "
 
 # git
 alias glog="git log --oneline"
