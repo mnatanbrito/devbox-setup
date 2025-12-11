@@ -99,6 +99,8 @@ source $ZSH/oh-my-zsh.sh
 ################
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# setting the editor for opencode as neovim
+export EDITOR=nvim
 
 ################
 # Custom aliases
