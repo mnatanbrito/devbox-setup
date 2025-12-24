@@ -75,6 +75,7 @@ cask "font-symbols-only-nerd-font"
 
 # terminal emulators
 cask "iterm2"
+cask "ghostty"
 
 # ides
 cask "xcodes-app"
