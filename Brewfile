@@ -34,6 +34,7 @@ brew "borders"
 brew "gh"
 brew "lazygit"
 brew "mise"
+brew "podman"
 
 # mac apple store command line
 brew "mas"
