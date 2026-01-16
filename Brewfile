@@ -66,6 +66,9 @@ cask "arc"
 cask "sublime-text" 
 cask "visual-studio-code"
 
+# note taking
+cask "obsidian"
+
 # ai
 cask "claude-code"
 
