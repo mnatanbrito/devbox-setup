@@ -1,2 +1,5 @@
 # Font configuration
 font-size = 18
+
+# Theme configuration
+theme = iTerm2 Solarized Light
