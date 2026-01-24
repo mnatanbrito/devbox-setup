@@ -123,7 +123,7 @@ function ensure_ohmyzsh_plugin() {
     fi
 }
 
-echo "Installing Zsh plugins"
+echo "${BLUE}Installing Zsh plugins${NOCOLOR}"
 
 ensure_ohmyzsh_plugin "zsh-autosuggestions"
 ensure_ohmyzsh_plugin "zsh-syntax-highlighting"
@@ -132,8 +132,15 @@ ensure_ohmyzsh_plugin "zsh-syntax-highlighting"
 # Default brew packages
 #######################
 
-# Install packages in brew file
-brew bundle install --verbose --force
+# Install formulas
+echo "${BLUE}Installing brew packages${NOCOLOR}⏳"
+brew bundle --file=Brewfile --force
+echo "${GREEN}Installed brew packages successfully${NOCOLOR} ✅"
+
+echo "${BLUE}Installing brew casks${NOCOLOR}⏳"
+# Install casks
+brew bundle --file=Caskfile --force
+echo "${GREEN}Installed brew casks sucessfully${NOCOLOR} ✅"
 
 #######################
 # Github configuration

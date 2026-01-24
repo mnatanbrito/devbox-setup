@@ -1,0 +1,44 @@
+#############
+# casks
+#############
+
+# networking
+cask "mitmproxy"
+
+# browsers
+cask "google-chrome"
+cask "firefox"
+cask "brave-browser"
+cask "arc"
+
+# text editors
+cask "sublime-text" 
+cask "visual-studio-code"
+
+# note taking
+cask "obsidian"
+
+# ai
+cask "claude-code"
+
+# nerd fonts
+cask "font-jetbrains-mono"
+cask "font-fira-code-nerd-font"
+cask "font-symbols-only-nerd-font"
+
+# terminal emulators
+cask "iterm2"
+cask "ghostty"
+
+# ides
+cask "xcodes-app"
+
+# dev
+cask "jupyterlab"
+
+# aerospace tiling manager
+cask "nikitabobko/tap/aerospace"
+
+# utilities
+cask "clop"
+
