@@ -183,5 +183,5 @@ ensure_lazy_vim
 # copy user files
 echo "${GREEN}Copying user files${NOCOLOR} ✅"
 
-cp -r .config/* ~/.config/
+cp -r user_files/ ~/
 
