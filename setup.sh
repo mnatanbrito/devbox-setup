@@ -1,7 +1,10 @@
 #!/bin/zsh
 
+# Source helper functions
+source "$(dirname "$0")/helpers.sh"
+
 #######################
-# Colors 
+# Colors
 #######################
 NOCOLOR='\033[0m'
 RED='\033[0;31m'
@@ -180,8 +183,28 @@ function ensure_lazy_vim() {
 
 ensure_lazy_vim
 
-# copy user files
-echo "${GREEN}Copying user files${NOCOLOR} ✅"
+function copy_user_files_with_merge() {
+    local source_dir="user_files"
+    local target_dir="$HOME"
 
-cp -r user_files/ ~/
+    # Files that need smart merging
+    local claude_json=".claude.json"
+    local claude_settings=".claude/settings.json"
+
+    # Merge Claude configuration files
+    echo "${BLUE}Merging Claude configuration files${NOCOLOR}"
+    deep_merge_json "$source_dir/$claude_json" "$target_dir/$claude_json"
+    deep_merge_json "$source_dir/$claude_settings" "$target_dir/$claude_settings"
+
+    # Copy remaining files with rsync, excluding the JSON files we already merged
+    echo "${BLUE}Copying remaining user files${NOCOLOR}"
+    rsync -av --exclude="$claude_json" --exclude="$claude_settings" "$source_dir/" "$target_dir/"
+
+    echo "${GREEN}User files copied with smart merge${NOCOLOR} ✅"
+}
+
+# copy user files
+echo "${BLUE}Copying user files${NOCOLOR}"
+
+copy_user_files_with_merge
 
