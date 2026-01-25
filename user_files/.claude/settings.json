@@ -4,6 +4,11 @@
       "Bash(npm run lint)",
       "Bash(npm run test:*)",
 
+      "Bash(git status)",
+      "Bash(git add:*)",
+      "Bash(git fetch)",
+      "Bash(git pull)",
+
       "Read(~/.zshrc)",
 
       "mcp__chrome-devtools__*"
@@ -16,7 +21,9 @@
       "Read(./build)"
     ],
     "ask": [
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
