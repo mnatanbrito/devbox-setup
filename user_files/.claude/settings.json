@@ -9,21 +9,40 @@
       "Bash(git fetch)",
       "Bash(git pull)",
 
+      "Bash(ls*)",
+
       "Read(~/.zshrc)",
 
-      "mcp__chrome-devtools__*"
+      "mcp__chrome-devtools__*",
+
+      "Edit(*)",
+      "Write(*)"
     ],
     "deny": [
       "Read(./.env)",
       "Read(./.env.*)",
       "Read(./secrets/**)",
       "Read(./config/credentials.json)",
-      "Read(./build)"
+      "Read(./build)",
+
+      "Edit(./.env)",
+      "Edit(./.env.*)",
+      "Edit(./secrets/**)",
+      "Edit(./config/credentials.json)",
+      "Write(./.env)",
+      "Write(./.env.*)",
+      "Write(./secrets/**)",
+      "Write(./config/credentials.json)"
     ],
     "ask": [
       "Bash(curl:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)"
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 0
   }
 }
