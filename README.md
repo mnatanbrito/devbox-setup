@@ -50,7 +50,7 @@ My default OS is Mac OS.
 | [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | Syntax highlighting for zsh |
 | [nvm auto-load](https://gist.github.com/tcrammond/e52dfad4c2b36258f83f7a964af10097) | Automatically load nvm when entering a directory |
 
-### 🎨 Theme
+## 🎨 Theme
 
 | Name | Description |
 |------|-------------|
