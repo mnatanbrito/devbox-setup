@@ -32,7 +32,9 @@ My default OS is Mac OS.
 
 ### Theme
 
-- [nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+| Name | Description |
+|------|-------------|
+| [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) | Iconic font aggregator and patcher |
 
 ## Code IDE
 
