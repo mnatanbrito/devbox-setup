@@ -1,5 +1,7 @@
-# Font configuration
+# Appearance
 font-size = 18
+theme = Catppuccin Frappe
 
-# Theme configuration
-theme = iTerm2 Solarized Light
+# General configs
+mouse-hide-while-typing = true
+macos-option-as-alt = true
