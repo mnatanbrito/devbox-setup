@@ -29,7 +29,9 @@ My default OS is Mac OS.
 
 ## 📦 Package Manager
 
-- [brew](https://brew.sh/)
+| Name | Description |
+|------|-------------|
+| [brew](https://brew.sh/) | macOS package manager |
 
 ## 🖥️ Terminal Emulator
 
@@ -44,16 +46,11 @@ My default OS is Mac OS.
 |------|-------------|
 | [oh my zsh](https://ohmyz.sh/) | Zsh configuration framework |
 | [starship](https://starship.rs) | Cross-shell prompt |
-
-### Plugins
-
-| Name | Description |
-|------|-------------|
 | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) | Fish-like autosuggestions for zsh |
 | [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | Syntax highlighting for zsh |
 | [nvm auto-load](https://gist.github.com/tcrammond/e52dfad4c2b36258f83f7a964af10097) | Automatically load nvm when entering a directory |
 
-### Theme
+### 🎨 Theme
 
 | Name | Description |
 |------|-------------|
