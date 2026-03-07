@@ -1,0 +1,33 @@
+name: Validate Installation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate-brewfiles:
+    name: Validate Brewfile and Caskfile
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate Brewfile syntax
+        run: brew bundle check --file=Brewfile --verbose || brew bundle list --file=Brewfile
+
+      - name: Validate Caskfile syntax
+        run: brew bundle check --file=Caskfile --verbose || brew bundle list --file=Caskfile
+
+  validate-install:
+    name: Validate install script
+    runs-on: macos-latest
+    needs: validate-brewfiles
+    env:
+      RUNZSH: 'no'
+      CHSH: 'no'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run installation script
+        run: zsh ./setup.sh
