@@ -29,6 +29,7 @@ cask "font-symbols-only-nerd-font"
 # terminal emulators
 cask "iterm2"
 cask "ghostty"
+cask "cmux"
 
 # ides
 cask "xcodes-app"

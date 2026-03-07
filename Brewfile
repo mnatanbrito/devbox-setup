@@ -4,6 +4,7 @@
 
 tap "jesseduffield/lazygit"
 tap "FelixKratz/formulae"
+tap "manaflow-ai/cmux"
 
 #############
 # formulas
