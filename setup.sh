@@ -15,9 +15,12 @@ function ensure_permission() {
 }
 
 function ensure_xcode_tools() {
-    # Install xCode cli tools
-    echo "${BLUE}Installing commandline tools...${NOCOLOR} ⌛"
-    xcode-select --install
+    if xcode-select -p &>/dev/null; then
+        echo "${GREEN}Xcode command line tools already installed${NOCOLOR} ✅"
+    else
+        echo "${BLUE}Installing commandline tools...${NOCOLOR} ⌛"
+        xcode-select --install
+    fi
 }
 
 function ensure_homebrew() {
@@ -121,16 +124,24 @@ echo "${BLUE}Installing brew packages${NOCOLOR}⏳"
 brew bundle --file=Brewfile --force
 echo "${GREEN}Installed brew packages successfully${NOCOLOR} ✅"
 
-echo "${BLUE}Installing brew casks${NOCOLOR}⏳"
-# Install casks
-brew bundle --file=Caskfile --force
-echo "${GREEN}Installed brew casks sucessfully${NOCOLOR} ✅"
+if [[ -z "$CI" ]]; then
+    echo "${BLUE}Installing brew casks${NOCOLOR}⏳"
+    # Install casks
+    brew bundle --file=Caskfile --force
+    echo "${GREEN}Installed brew casks sucessfully${NOCOLOR} ✅"
+else
+    echo "${YELLOW}Skipping cask installation in CI environment${NOCOLOR}"
+fi
 
 #######################
 # Github configuration
 #######################
 
 function ensure_gh_auth() {
+    if [[ -n "$CI" ]]; then
+        echo "${YELLOW}Skipping gh auth in CI environment${NOCOLOR}"
+        return 0
+    fi
     if gh auth status &>/dev/null; then
         echo "${GREEN}Github CLI is authorized${NOCOLOR} ✅"
     else
