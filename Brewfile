@@ -29,7 +29,7 @@ brew "yazi"
 brew "tw93/tap/mole"
 
 # miscellaneous
-brew "borders"
+brew "felixkratz/formulae/borders"
 
 # programming tools / runtime
 brew "gh"
