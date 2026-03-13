@@ -26,7 +26,7 @@ brew "resvg"
 brew "imagemagick"
 brew "fzf"
 brew "yazi"
-brew "tw93/tap/mole"
+brew "mole"
 
 # miscellaneous
 brew "felixkratz/formulae/borders"
