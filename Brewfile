@@ -29,7 +29,7 @@ brew "yazi"
 brew "tw93/tap/mole"
 
 # miscellaneous
-brew "borders"
+brew "felixkratz/formulae/borders"
 
 # programming tools / runtime
 brew "gh"
@@ -48,8 +48,8 @@ brew "opencode"
 
 # databases
 
-# installs postgres and restart service if installed or upgraded
-brew "postgresql", restart_service: :changed
+# installs postgres 18 and restart service if installed or upgraded
+brew "postgresql@18", restart_service: :changed
 
 #############
 # mas
