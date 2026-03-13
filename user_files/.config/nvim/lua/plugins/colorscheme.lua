@@ -3,13 +3,16 @@ return {
 	{ "Mofiqul/dracula.nvim" },
 
 	-- add catppuccin
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "catppuccin/nvim", name = "catppuccin" },
 
-	-- Configure LazyVim to load catppuccin
+	-- rose pine
+	{ "rose-pine/neovim", name = "rose-pine" },
+
+	-- Configure LazyVim to load rose pine dawn
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "catppuccin-latte",
+			colorscheme = "rose-pine-dawn",
 		},
 	},
 }
