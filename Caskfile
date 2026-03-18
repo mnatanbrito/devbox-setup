@@ -35,7 +35,7 @@ cask "cmux"
 cask "xcodes-app"
 
 # dev
-cask "jupyterlab"
+cask "jupyterlab-app"
 
 # aerospace tiling manager
 cask "nikitabobko/tap/aerospace"
