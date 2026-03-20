@@ -25,6 +25,7 @@ cask "claude-code"
 cask "font-jetbrains-mono"
 cask "font-fira-code-nerd-font"
 cask "font-symbols-only-nerd-font"
+cask "font-hack-nerd-font"
 
 # terminal emulators
 cask "iterm2"

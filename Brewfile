@@ -13,6 +13,8 @@ tap "manaflow-ai/cmux"
 # shell & prompt
 brew "zsh"
 brew "starship"
+brew "tmux"
+brew "sketchybar", restart_service: :always
 
 # utilities
 brew "jq"
