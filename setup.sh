@@ -204,27 +204,3 @@ copy_user_files_with_merge
 # macOS Configuration
 #######################
 
-function ensure_menu_bar_hidden() {
-    if [[ -n "$CI" ]]; then
-        echo "${YELLOW}Skipping menu bar configuration in CI environment${NOCOLOR}"
-        return 0
-    fi
-
-    # Check current status (returns 1 if true, 0 if false/not set)
-    local current_status=$(defaults read NSGlobalDomain _HIHideMenuBar 2>/dev/null || echo "0")
-
-    if [[ "$current_status" == "1" ]]; then
-        echo "${GREEN}Menu bar is already hidden${NOCOLOR} ✅"
-    else
-        echo "${BLUE}Hiding macOS menu bar (SketchyBar will be used instead)${NOCOLOR} ⌛"
-        defaults write NSGlobalDomain _HIHideMenuBar -bool true
-
-        echo "${BLUE}Restarting Finder to apply changes${NOCOLOR} ⚡"
-        killall Finder
-
-        echo "${GREEN}Menu bar hidden successfully${NOCOLOR} ✅"
-    fi
-}
-
-ensure_menu_bar_hidden
-
