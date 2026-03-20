@@ -14,7 +14,7 @@ tap "manaflow-ai/cmux"
 brew "zsh"
 brew "starship"
 brew "tmux"
-brew "sketchybar", restart_service: :always
+brew "felixkratz/formulae/sketchybar", restart_service: :always
 
 # utilities
 brew "jq"
