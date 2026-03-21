@@ -32,11 +32,15 @@ brew "mole"
 # miscellaneous
 brew "felixkratz/formulae/borders"
 
-# programming tools / runtime
+# programming tools & runtime & containers
 brew "gh"
 brew "lazygit"
 brew "mise"
+
 brew "podman"
+brew "minikube"
+brew "kubectl"
+brew "derailed/k9s/k9s"
 
 # mac apple store command line
 brew "mas"
