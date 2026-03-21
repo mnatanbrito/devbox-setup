@@ -21,6 +21,9 @@ return {
 			sources = {
 				explorer = { hidden = true },
 			},
+			files = {
+				files = { hidden = true },
+			},
 		},
 	},
 }

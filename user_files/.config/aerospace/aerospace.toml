@@ -13,7 +13,6 @@ after-startup-command = [
   'exec-and-forget borders'
 ]
 
-
 # Start AeroSpace at login
 start-at-login = true
 
@@ -66,6 +65,12 @@ automatically-unhide-macos-hidden-apps = false
     outer.bottom =     8
     outer.top =        8
     outer.right =      16
+
+# Assign workspaces to specific monitors
+[workspace-to-monitor-force-assignment]
+    browsing = 'built-in'                    # Arc on built-in display
+    utils = 'built-in'                       # Sublime on built-in display
+    coding = ['secondary', 'benq', '^benq']  # Terminals on external monitor
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -121,18 +126,14 @@ automatically-unhide-macos-hidden-apps = false
     alt-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    alt-1 = 'workspace 1'
-    alt-2 = 'workspace 2'
-    alt-3 = 'workspace 3'
-    alt-4 = 'workspace 4'
-    alt-5 = 'workspace 5'
+    alt-b = 'workspace browsing'
+    alt-u = 'workspace utils'
+    alt-c = 'workspace coding'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    alt-shift-1 = 'move-node-to-workspace 1'
-    alt-shift-2 = 'move-node-to-workspace 2'
-    alt-shift-3 = 'move-node-to-workspace 3'
-    alt-shift-4 = 'move-node-to-workspace 4'
-    alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-b = 'move-node-to-workspace browsing'
+    alt-shift-u = 'move-node-to-workspace utils'
+    alt-shift-c = 'move-node-to-workspace coding'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
@@ -162,10 +163,42 @@ automatically-unhide-macos-hidden-apps = false
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
 
-# Workaround for issue with Ghostty
-# For more info, visit: https://ghostty.org/docs/help/macos-tiling-wms
+# Workaround for terminal apps - Ghostty and iTerm2
+# For more info on Ghostty: https://ghostty.org/docs/help/macos-tiling-wms
 [[on-window-detected]]
-if.app-id="com.mitchellh.ghostty"
-run= [
-  "layout floating",
-]
+if.app-id = 'com.mitchellh.ghostty'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.googlecode.iterm2'
+run = ['layout floating']
+
+# Window detection rules - assign apps to workspaces on startup
+# Arc Browser → browsing workspace (built-in display)
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace browsing'
+
+# Sublime Text → utils workspace (built-in display)
+[[on-window-detected]]
+if.app-id = 'com.sublimetext.4'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace utils'
+
+# Ghostty → coding workspace (external monitor)
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace coding'
+
+# iTerm2 → coding workspace (external monitor)
+[[on-window-detected]]
+if.app-id = 'com.googlecode.iterm2'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace coding'
+
+# System Settings → always float on built-in display
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = ['move-node-to-monitor built-in', 'layout floating']
