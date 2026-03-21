@@ -19,7 +19,12 @@ return {
 		},
 		picker = {
 			sources = {
-				explorer = { hidden = true },
+				explorer = {
+					hidden = true,
+				},
+				files = {
+					hidden = true,
+				},
 			},
 		},
 	},
