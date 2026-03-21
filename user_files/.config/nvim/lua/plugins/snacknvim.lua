@@ -18,16 +18,18 @@ return {
 			},
 		},
 		picker = {
+			enabled = true,
 			sources = {
 				explorer = {
 					hidden = true,
+					exclude = {
+						".git",
+						"node_modules",
+					},
 				},
 				files = {
 					hidden = true,
 				},
-			},
-			files = {
-				files = { hidden = true },
 			},
 		},
 	},
