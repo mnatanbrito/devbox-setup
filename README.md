@@ -11,6 +11,7 @@
 - [🐚 Shell](#-shell)
 - [✏️ Code IDE](#️-code-ide)
 - [🤖 AI Coding](#-ai-coding)
+- [🐳 Containers & Kubernetes](#-containers--kubernetes)
 
 ---
 
@@ -71,3 +72,12 @@ My default OS is Mac OS.
 |------|-------------|
 | [claude-code](https://code.claude.com/docs/en/overview) | Anthropic's CLI coding agent |
 | [opencode](https://opencode.ai/) | Open-source AI coding tool |
+
+## 🐳 Containers & Kubernetes
+
+| Name | Description |
+|------|-------------|
+| [podman](https://podman.io/) | Daemonless container engine |
+| [minikube](https://minikube.sigs.k8s.io/) | Local Kubernetes cluster |
+| [kubectl](https://kubernetes.io/docs/reference/kubectl/) | Kubernetes command-line tool |
+| [k9s](https://k9scli.io/) | Terminal UI for Kubernetes |
