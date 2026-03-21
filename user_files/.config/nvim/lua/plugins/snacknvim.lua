@@ -26,6 +26,9 @@ return {
 					hidden = true,
 				},
 			},
+			files = {
+				files = { hidden = true },
+			},
 		},
 	},
 }
