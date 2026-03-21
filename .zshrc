@@ -102,6 +102,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # setting the editor for opencode as neovim
 export EDITOR=nvim
 
+# Kubectl edit command will use this env var
+export KUBE_EDITOR=nvim
+
 ################
 # Custom aliases
 ################
