@@ -127,6 +127,9 @@ alias gcommits="git log --author=mnatanbrito"
 # lazygit
 alias lg="lazygit"
 
+# coontainers
+alias kubectl="minikube kubectl --"
+
 ################
 # Shell & Prompt configuration
 ################
