@@ -189,7 +189,6 @@ run = 'move-node-to-workspace utils'
 # Ghostty → coding workspace (external monitor)
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-if.during-aerospace-startup = true
 run = 'move-node-to-workspace coding'
 
 # iTerm2 → coding workspace (external monitor)
