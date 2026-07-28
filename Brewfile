@@ -28,6 +28,7 @@ brew "imagemagick"
 brew "fzf"
 brew "yazi"
 brew "mole"
+brew "bottom"
 
 # miscellaneous
 brew "felixkratz/formulae/borders"
@@ -40,6 +41,7 @@ brew "mise"
 brew "podman"
 brew "minikube"
 brew "kubectl"
+tap "derailed/k9s"
 brew "derailed/k9s/k9s"
 
 # mac apple store command line

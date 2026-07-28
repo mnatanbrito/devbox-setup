@@ -39,8 +39,11 @@ cask "xcodes-app"
 cask "jupyterlab-app"
 
 # aerospace tiling manager
+tap "nikitabobko/tap"
 cask "nikitabobko/tap/aerospace"
 
 # utilities
 cask "clop"
 
+# entertainment
+cask "spotify"
