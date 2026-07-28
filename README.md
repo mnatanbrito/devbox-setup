@@ -42,6 +42,7 @@ My default OS is Mac OS.
 | [Ghostty](https://ghostty.org/) | GPU-accelerated terminal emulator |
 | [tmux](https://github.com/tmux/tmux) | Terminal multiplexer |
 | [cmux](https://github.com/manaflow-ai/cmux) | AI-powered terminal multiplexer |
+| [herdr](https://herdr.dev) | Terminal-based multiplexer for running multiple coding agents |
 
 ## 🐚 Shell
 
