@@ -14,6 +14,7 @@ tap "manaflow-ai/cmux"
 brew "zsh"
 brew "starship"
 brew "tmux"
+brew "herdr"
 
 # utilities
 brew "jq"
