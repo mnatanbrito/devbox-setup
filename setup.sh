@@ -119,6 +119,13 @@ ensure_ohmyzsh_plugin "zsh-syntax-highlighting"
 # Default brew packages
 #######################
 
+function ensure_brew_tap_trusted() {
+    brew trust "$1" 2>/dev/null || true
+}
+
+ensure_brew_tap_trusted "derailed/k9s"
+ensure_brew_tap_trusted "nikitabobko/tap"
+
 # Install formulas
 echo "${BLUE}Installing brew packages${NOCOLOR}⏳"
 brew bundle --file=Brewfile --force
