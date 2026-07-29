@@ -125,6 +125,7 @@ function ensure_brew_tap_trusted() {
 
 ensure_brew_tap_trusted "derailed/k9s"
 ensure_brew_tap_trusted "nikitabobko/tap"
+ensure_brew_tap_trusted "agavra/tap"
 
 # Install formulas
 echo "${BLUE}Installing brew packages${NOCOLOR}⏳"
