@@ -5,6 +5,7 @@
 tap "jesseduffield/lazygit"
 tap "FelixKratz/formulae"
 tap "manaflow-ai/cmux"
+tap "agavra/tap"
 
 #############
 # formulas
@@ -37,6 +38,7 @@ brew "felixkratz/formulae/borders"
 # programming tools & runtime & containers
 brew "gh"
 brew "lazygit"
+brew "agavra/tap/tuicr"
 brew "mise"
 
 brew "podman"

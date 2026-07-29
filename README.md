@@ -11,6 +11,7 @@
 - [🐚 Shell](#-shell)
 - [✏️ Code IDE](#️-code-ide)
 - [🤖 AI Coding](#-ai-coding)
+- [🔍 Code Review](#-code-review)
 - [🐳 Containers & Kubernetes](#-containers--kubernetes)
 
 ---
@@ -73,6 +74,12 @@ My default OS is Mac OS.
 |------|-------------|
 | [claude-code](https://code.claude.com/docs/en/overview) | Anthropic's CLI coding agent |
 | [opencode](https://opencode.ai/) | Open-source AI coding tool |
+
+## 🔍 Code Review
+
+| Name | Description |
+|------|-------------|
+| [tuicr](https://tuicr.dev/) | Terminal UI for GitHub-style code review with vim keybindings |
 
 ## 🐳 Containers & Kubernetes
 
