@@ -17,6 +17,11 @@ function deep_merge_json() {
     local source_file="$1"
     local target_file="$2"
 
+    if ! command -v jq &>/dev/null; then
+        echo "${RED}jq is required to merge JSON files but was not found${NOCOLOR}"
+        return 1
+    fi
+
     # If source doesn't exist, nothing to do
     if [ ! -f "$source_file" ]; then
         echo "${YELLOW}Source file $source_file does not exist, skipping${NOCOLOR}"
@@ -45,38 +50,58 @@ function deep_merge_json() {
 
     echo "${BLUE}Merging $source_file into $target_file${NOCOLOR}"
 
-    # Deep merge: target values preserved, source adds new keys
-    # Objects: recursively merge
-    # Arrays: concatenate and deduplicate
-    # Scalars: target value wins
-    local merged
-    merged=$(jq -s '
-      def deep_merge:
-        if type == "array" then
-          . as $arr | $arr[0] as $a | $arr[1] as $b |
-          if ($a | type) == "object" and ($b | type) == "object" then
-            $a | to_entries | map(.key) | . as $akeys |
-            $b | to_entries | map(.key) | . as $bkeys |
-            ($akeys + $bkeys) | unique | map(. as $k |
-              {($k): ([$a[$k], $b[$k]] | deep_merge)}
-            ) | add
-          elif ($a | type) == "array" and ($b | type) == "array" then
-            ($a + $b) | unique
-          else
-            $a // $b
-          end
-        else .
-        end;
-      [.[0], .[1]] | deep_merge
-    ' "$target_file" "$source_file")
+    local tmp_file
+    tmp_file=$(mktemp) || {
+        echo "${RED}Failed to create temporary file${NOCOLOR}"
+        return 1
+    }
 
-    if [ $? -ne 0 ]; then
+    # Deep merge: everything already in the target is preserved, the source
+    # only fills in what is missing.
+    # Objects: recursively merge, keeping the target's key order
+    # Arrays: keep the target's items and order, append only new source items
+    # Scalars: target value wins (including false and null)
+    if ! jq -n --slurpfile t "$target_file" --slurpfile s "$source_file" '
+      def merge($a; $b):
+        if ($a | type) == "object" and ($b | type) == "object" then
+          reduce ($b | keys_unsorted[]) as $k ($a;
+            if ($a | has($k)) then .[$k] = merge($a[$k]; $b[$k])
+            else .[$k] = $b[$k]
+            end)
+        elif ($a | type) == "array" and ($b | type) == "array" then
+          $a + ($b - $a)
+        else $a
+        end;
+      merge($t[0]; $s[0])
+    ' > "$tmp_file"; then
         echo "${RED}Failed to merge JSON files${NOCOLOR}"
+        rm -f "$tmp_file"
         return 1
     fi
 
-    # Write merged content back to target
-    echo "$merged" > "$target_file"
+    # Never overwrite the target with something that isn't valid JSON
+    if ! validate_json "$tmp_file"; then
+        echo "${RED}Merge produced invalid JSON, leaving $target_file untouched${NOCOLOR}"
+        rm -f "$tmp_file"
+        return 1
+    fi
+
+    local backup_file="$target_file.bak.$(date +%s)"
+    if ! cp -p "$target_file" "$backup_file"; then
+        echo "${RED}Failed to back up $target_file, aborting merge${NOCOLOR}"
+        rm -f "$tmp_file"
+        return 1
+    fi
+    echo "${DARKGRAY}Backed up $target_file to $backup_file${NOCOLOR}"
+
+    # Write through the existing file so its permissions are preserved
+    if ! cat "$tmp_file" > "$target_file"; then
+        echo "${RED}Failed to write merged content to $target_file${NOCOLOR}"
+        rm -f "$tmp_file"
+        return 1
+    fi
+
+    rm -f "$tmp_file"
     echo "${GREEN}Successfully merged into $target_file${NOCOLOR} ✅"
     return 0
 }
