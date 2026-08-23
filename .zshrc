@@ -115,6 +115,7 @@ alias show="ls -la "
 alias rmdir="rm -dRf "
 alias ports="lsof -i -P -n | grep LISTEN"
 alias v="nvim "
+alias brew-update="brew update && brew upgrade"
 
 # git
 alias glog="git log --oneline"
