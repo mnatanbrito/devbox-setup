@@ -155,3 +155,7 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+# Making postgress available via command line
+# Apple Silicon; use /usr/local/opt on Intel, and match your installed version.
+export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
