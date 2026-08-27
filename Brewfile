@@ -40,6 +40,7 @@ brew "gh"
 brew "lazygit"
 brew "agavra/tap/tuicr"
 brew "mise"
+brew "hunk"
 
 brew "podman"
 brew "minikube"
