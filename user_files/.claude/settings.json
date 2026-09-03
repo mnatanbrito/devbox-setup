@@ -28,11 +28,7 @@
       "Edit(./.env)",
       "Edit(./.env.*)",
       "Edit(./secrets/**)",
-      "Edit(./config/credentials.json)",
-      "Write(./.env)",
-      "Write(./.env.*)",
-      "Write(./secrets/**)",
-      "Write(./config/credentials.json)"
+      "Edit(./config/credentials.json)"
     ],
     "ask": [
       "Bash(curl:*)",

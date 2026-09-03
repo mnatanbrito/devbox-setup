@@ -31,6 +31,7 @@ brew "fzf"
 brew "yazi"
 brew "mole"
 brew "bottom"
+brew "btop"
 
 # miscellaneous
 brew "felixkratz/formulae/borders"
