@@ -12,6 +12,7 @@
 - [✏️ Code IDE](#️-code-ide)
 - [🤖 AI Coding](#-ai-coding)
 - [🔍 Code Review](#-code-review)
+- [💰 Finance](#-finance)
 - [🐳 Containers & Kubernetes](#-containers--kubernetes)
 
 ---
@@ -80,6 +81,12 @@ My default OS is Mac OS.
 | Name | Description |
 |------|-------------|
 | [tuicr](https://tuicr.dev/) | Terminal UI for GitHub-style code review with vim keybindings |
+
+## 💰 Finance
+
+| Name | Description |
+|------|-------------|
+| [Gloomberb](https://github.com/gloom-sh/gloomberb) | Open-source, keyboard-driven finance terminal (TUI) |
 
 ## 🐳 Containers & Kubernetes
 
