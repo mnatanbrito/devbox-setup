@@ -42,6 +42,10 @@ cask "jupyterlab-app"
 tap "nikitabobko/tap"
 cask "nikitabobko/tap/aerospace"
 
+# finance
+tap "vincelwt/tap"
+cask "vincelwt/tap/gloomberb"
+
 # utilities
 cask "clop"
 
