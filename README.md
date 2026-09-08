@@ -42,6 +42,7 @@ My default OS is Mac OS.
 |------|-------------|
 | [iTerm2](https://iterm2.com/) | macOS terminal replacement |
 | [Ghostty](https://ghostty.org/) | GPU-accelerated terminal emulator |
+| [WezTerm](https://wezterm.org/) | GPU-accelerated terminal emulator and multiplexer |
 | [tmux](https://github.com/tmux/tmux) | Terminal multiplexer |
 | [cmux](https://github.com/manaflow-ai/cmux) | AI-powered terminal multiplexer |
 | [herdr](https://herdr.dev) | Terminal-based multiplexer for running multiple coding agents |
