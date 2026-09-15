@@ -57,6 +57,7 @@ brew "neovim"
 
 # ai
 brew "opencode"
+brew "ollama"
 
 # databases
 
