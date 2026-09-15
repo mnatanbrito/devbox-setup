@@ -6,6 +6,7 @@ tap "jesseduffield/lazygit"
 tap "FelixKratz/formulae"
 tap "manaflow-ai/cmux"
 tap "agavra/tap"
+tap "anomalyco/tap"
 
 #############
 # formulas
@@ -56,7 +57,7 @@ brew "mas"
 brew "neovim"
 
 # ai
-brew "opencode"
+brew "anomalyco/tap/opencode"
 brew "ollama", start_service: true
 
 # databases
