@@ -57,7 +57,7 @@ brew "neovim"
 
 # ai
 brew "opencode"
-brew "ollama"
+brew "ollama", start_service: true
 
 # databases
 
