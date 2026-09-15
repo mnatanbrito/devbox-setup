@@ -128,11 +128,16 @@ ensure_brew_tap_trusted "nikitabobko/tap"
 ensure_brew_tap_trusted "agavra/tap"
 ensure_brew_tap_trusted "vincelwt/tap"
 ensure_brew_tap_trusted "anomalyco/tap"
+ensure_brew_tap_trusted "felixkratz/formulae"
 
 # Install formulas
 echo "${BLUE}Installing brew packages${NOCOLOR}⏳"
-brew bundle --file=Brewfile --force
-echo "${GREEN}Installed brew packages successfully${NOCOLOR} ✅"
+if brew bundle --file=Brewfile --force; then
+    echo "${GREEN}Installed brew packages successfully${NOCOLOR} ✅"
+else
+    echo "${RED}Error installing brew packages${NOCOLOR}🚫"
+    exit 1
+fi
 
 if [[ -z "$CI" ]]; then
     echo "${BLUE}Installing brew casks${NOCOLOR}⏳"
