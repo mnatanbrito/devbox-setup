@@ -216,6 +216,36 @@ echo "${BLUE}Copying user files${NOCOLOR}"
 copy_user_files_with_merge
 
 #######################
+# Unsloth Desktop
+#######################
+
+function ensure_unsloth_desktop() {
+    if [ -d "/Applications/Unsloth Desktop.app" ]; then
+        echo "${GREEN}Unsloth Desktop is already installed${NOCOLOR} ✅"
+        return 0
+    fi
+
+    echo "${BLUE}Installing Unsloth Desktop using official installer...${NOCOLOR} ⌛"
+    
+    # Run the official Unsloth installation script
+    if ! curl -fsSL https://unsloth.ai/install.sh | sh; then
+        echo "${RED}Failed to install Unsloth Desktop${NOCOLOR}🚫"
+        return 1
+    fi
+
+    echo "${GREEN}Unsloth Desktop installed successfully${NOCOLOR} ✅"
+    return 0
+}
+
+# Install Unsloth Desktop
+if [[ -n "$CI" ]]; then
+    echo "${YELLOW}Skipping Unsloth Desktop installation in CI environment${NOCOLOR}"
+else
+    ensure_unsloth_desktop
+fi
+
+#######################
 # macOS Configuration
 #######################
+
 
