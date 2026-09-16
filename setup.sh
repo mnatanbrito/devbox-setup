@@ -238,7 +238,11 @@ function ensure_unsloth_desktop() {
 }
 
 # Install Unsloth Desktop
-ensure_unsloth_desktop
+if [[ -n "$CI" ]]; then
+    echo "${YELLOW}Skipping Unsloth Desktop installation in CI environment${NOCOLOR}"
+else
+    ensure_unsloth_desktop
+fi
 
 #######################
 # macOS Configuration
