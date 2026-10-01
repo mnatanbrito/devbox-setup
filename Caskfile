@@ -20,6 +20,7 @@ cask "obsidian"
 
 # ai
 cask "claude-code"
+cask "claude"
 
 # nerd fonts
 cask "font-jetbrains-mono"

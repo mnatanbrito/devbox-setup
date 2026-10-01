@@ -75,6 +75,7 @@ My default OS is Mac OS.
 | Name | Description |
 |------|-------------|
 | [claude-code](https://code.claude.com/docs/en/overview) | Anthropic's CLI coding agent |
+| [Claude Desktop](https://formulae.brew.sh/cask/claude) | Anthropic's official Claude desktop app |
 | [opencode](https://opencode.ai/) | Open-source AI coding tool |
 
 ## 🔍 Code Review
