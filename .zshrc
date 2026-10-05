@@ -125,6 +125,9 @@ alias gpull="git pull"
 alias gpause="git stash -u"
 alias gcommits="git log --author=mnatanbrito"
 
+# ai
+alias claude-leraos='CLAUDE_CONFIG_DIR=~/.claude-max-account claude'
+
 # lazygit
 alias lg="lazygit"
 
