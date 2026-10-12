@@ -3,7 +3,6 @@
 #############
 
 tap "jesseduffield/lazygit"
-tap "manaflow-ai/cmux"
 tap "agavra/tap"
 tap "anomalyco/tap"
 
