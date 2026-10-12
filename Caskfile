@@ -40,10 +40,6 @@ cask "xcodes-app"
 # dev
 cask "jupyterlab-app"
 
-# aerospace tiling manager
-tap "nikitabobko/tap"
-cask "nikitabobko/tap/aerospace"
-
 # finance
 tap "vincelwt/tap"
 cask "vincelwt/tap/gloomberb"
