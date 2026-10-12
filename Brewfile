@@ -3,7 +3,6 @@
 #############
 
 tap "jesseduffield/lazygit"
-tap "FelixKratz/formulae"
 tap "manaflow-ai/cmux"
 tap "agavra/tap"
 tap "anomalyco/tap"
@@ -33,9 +32,6 @@ brew "yazi"
 brew "mole"
 brew "bottom"
 brew "btop"
-
-# miscellaneous
-brew "felixkratz/formulae/borders"
 
 # programming tools & runtime & containers
 brew "gh"
