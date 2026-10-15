@@ -5,6 +5,7 @@
 tap "jesseduffield/lazygit"
 tap "agavra/tap"
 tap "anomalyco/tap"
+tap "AlexsJones/llmfit"
 
 #############
 # formulas
@@ -53,6 +54,7 @@ brew "neovim"
 
 # ai
 brew "anomalyco/tap/opencode"
+brew "AlexsJones/llmfit/llmfit"
 brew "ollama", start_service: true
 
 # databases
