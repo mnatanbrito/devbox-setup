@@ -127,6 +127,7 @@ ensure_brew_tap_trusted "derailed/k9s"
 ensure_brew_tap_trusted "agavra/tap"
 ensure_brew_tap_trusted "vincelwt/tap"
 ensure_brew_tap_trusted "anomalyco/tap"
+ensure_brew_tap_trusted "AlexsJones/llmfit"
 
 # Install formulas
 echo "${BLUE}Installing brew packages${NOCOLOR}⏳"
