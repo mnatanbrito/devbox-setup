@@ -76,6 +76,8 @@ My default OS is Mac OS.
 | [opencode](https://opencode.ai/) | Open-source AI coding tool |
 | [llmfit](https://github.com/AlexsJones/llmfit) | Checks which LLMs fit your machine's hardware |
 
+`setup.sh` installs the global Claude Code prompt from `user_files/.claude/CLAUDE.md` to `~/.claude/CLAUDE.md`. It replaces the existing file. After you change `~/.claude/CLAUDE.md`, run `./sync-claude-prompt.sh` to copy it back into the repo.
+
 ## 🔍 Code Review
 
 | Name | Description |
